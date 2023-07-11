@@ -26,9 +26,6 @@ from pytube import YouTube
 
 
 import sys
-sys.path.append('/Users/andresjr/Desktop/streamlit_AI/venv/lib/python3.10/site-packages/ffmpeg')
-
-
 import ssl
 ssl._create_default_https_context = ssl._create_stdlib_context
 

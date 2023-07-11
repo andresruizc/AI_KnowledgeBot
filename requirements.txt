@@ -1,0 +1,24 @@
+streamlit==1.24.0
+streamlit-extras
+streamlit_option_menu
+python-dotenv
+langchain
+openai
+google-api-python-client
+google-search-results
+youtube-transcript-api
+faiss-cpu
+wikipedia
+PyPDF2
+pdfminer.six
+gradio_tools
+tabulate
+tiktoken
+pytube
+jiwer
+ffmpeg-python
+ffmpeg
+openai-whisper
+git+https://github.com/openai/whisper.git 
+#brew install ffmpeg
+nltk

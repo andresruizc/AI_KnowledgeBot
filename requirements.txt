@@ -14,7 +14,7 @@ pdfminer.six
 gradio_tools
 tabulate
 tiktoken
-pytube
+git+https://github.com/andresruizc/pytube_streamlit_error.git
 jiwer
 ffmpeg-python
 ffmpeg

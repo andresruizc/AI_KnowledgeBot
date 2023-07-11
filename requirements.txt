@@ -20,5 +20,5 @@ ffmpeg-python
 ffmpeg
 openai-whisper
 git+https://github.com/openai/whisper.git 
-#brew install ffmpeg
+brew install ffmpeg
 nltk

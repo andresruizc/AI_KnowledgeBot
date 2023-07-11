@@ -6,11 +6,11 @@ ss = st.session_state
 
 def youtube_chunk():
     
-    st.selectbox('Fragment size', [200,300,400,500,600,700,800,900,1000,1200], index=3, key='frag_size_yt',help="Maximum number of characters that a chunk can contain.")
+    st.selectbox('Fragment size', [200,300,400,500,600,700,800,900,1000,1200], index=5, key='frag_size_yt',help="Maximum number of characters that a chunk can contain.")
 
 def youtube_overlap():
     
-    st.selectbox('Fragment overlap', [100,200,300,400,500,600,700], index=1, key='frag_overlap_yt',help = "Number of characters that overlap between two consecutive chunks")
+    st.selectbox('Fragment overlap', [100,200,300,400,500,600,700], index=2, key='frag_overlap_yt',help = "Number of characters that overlap between two consecutive chunks")
 
 def youtube_temp():
     
@@ -22,11 +22,11 @@ def youtube_model():
         
 def pdf_chunk():
     
-    st.selectbox('Fragment size', [200,300,400,500,600,700,800,900,1000], index=3, key='frag_size_pdf',help="Maximum number of characters that a chunk can contain.")
+    st.selectbox('Fragment size', [200,300,400,500,600,700,800,900,1000], index=5, key='frag_size_pdf',help="Maximum number of characters that a chunk can contain.")
 
 def pdf_overlap():
     
-    st.selectbox('Fragment overlap', [100,200,300,400,500,600,700], index=1, key='frag_overlap_pdf',help = "Number of characters that overlap between two consecutive chunks")
+    st.selectbox('Fragment overlap', [100,200,300,400,500,600,700], index=2, key='frag_overlap_pdf',help = "Number of characters that overlap between two consecutive chunks")
 
 def pdf_temp():
     st.slider('Temperature', 0.0, 1.0, 0.2, 0.1, key='temperature_pdf', format='%0.1f',help= "Randoness of the AI generated text. The closer to 0 the more deterministic")

@@ -33,11 +33,11 @@ ss = st.session_state
 
 def youtube_whisper(video_url):
 
-    audio_file = YouTube(video_url).streams.filter(only_audio=True).first().download(filename="./video/audio.mp4")
+    #audio_file = YouTube(video_url).streams.filter(only_audio=True).first().download(filename="./video/audio.mp4")
 
     whisper_model = whisper.load_model("base")
 
-    transcription = whisper_model.transcribe("./video/audio.mp4")
+    transcription = whisper_model.transcribe(YouTube(video_url).streams.filter(only_audio=True).first())
         
     return transcription['text']
 

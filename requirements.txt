@@ -17,7 +17,6 @@ tiktoken
 git+https://github.com/andresruizc/pytube_streamlit_error.git
 jiwer
 ffmpeg-python
-ffmpeg
 openai-whisper
 git+https://github.com/openai/whisper.git 
 nltk

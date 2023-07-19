@@ -46,7 +46,7 @@ def create_db_from_youtube_video_url(video_url,chunks,overlap):
     
     loader = YoutubeLoader.from_youtube_url(video_url)
 
-    docs = loader.load_documents()
+    docs = loader.load()
     
     #transcript_w = youtube_whisper(video_url)
     #whisper_trans = [Document(page_content=t) for t in [str(transcript_w)]]

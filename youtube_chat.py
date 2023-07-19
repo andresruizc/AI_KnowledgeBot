@@ -53,11 +53,11 @@ def create_db_from_youtube_video_url(video_url,chunks,overlap):
 
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunks, chunk_overlap=overlap)
     #docs = text_splitter.split_documents(whisper_trans)
-    docs = text_splitter.split_documents(docs)
+    docs_ = text_splitter.split_documents(docs)
     
-    db = FAISS.from_documents(docs, OpenAIEmbeddings())
+    db = FAISS.from_documents(docs_, OpenAIEmbeddings())
 
-    return db,transcript_w
+    return db,docs
 
 
 def get_response_from_query(db, query, model_name,temp, summary = False):

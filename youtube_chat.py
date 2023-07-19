@@ -44,15 +44,16 @@ def youtube_whisper(video_url):
 
 def create_db_from_youtube_video_url(video_url,chunks,overlap):
     
-    #loader = YoutubeLoader.from_youtube_url(video_url)
+    loader = YoutubeLoader.from_youtube_url(video_url)
 
-    #docs = loader.load_documents()
+    docs = loader.load_documents()
     
-    transcript_w = youtube_whisper(video_url)
-    whisper_trans = [Document(page_content=t) for t in [str(transcript_w)]]
+    #transcript_w = youtube_whisper(video_url)
+    #whisper_trans = [Document(page_content=t) for t in [str(transcript_w)]]
 
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunks, chunk_overlap=overlap)
-    docs = text_splitter.split_documents(whisper_trans)
+    #docs = text_splitter.split_documents(whisper_trans)
+    docs = text_splitter.split_documents(docs)
     
     db = FAISS.from_documents(docs, OpenAIEmbeddings())
 

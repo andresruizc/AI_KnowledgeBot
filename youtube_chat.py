@@ -57,7 +57,7 @@ def create_db_from_youtube_video_url(video_url,chunks,overlap):
     
     db = FAISS.from_documents(docs_, OpenAIEmbeddings())
 
-    return db," ".join([d.page_content for d in docs])
+    return db,docs
 
 
 def get_response_from_query(db, query, model_name,temp, summary = False):

@@ -78,7 +78,7 @@ if selected == "Youtube":
                                         placeholder_process.empty() 
                                         with get_openai_callback() as cb:
                                             response,transcription = create_db_from_youtube_video_url(user_input,chunk_size_yt,frag_overlap_yt)
-                                            ss.youtube_transcript = transcription
+                                            ss.youtube_transcript = " ".join([d.page_content for d in transcription])
                                             ss.response = response
 
                                             print(cb)
